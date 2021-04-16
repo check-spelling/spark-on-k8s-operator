@@ -1,0 +1,25 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# GitHub SHAs
+\bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+(?:/[^/]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+\bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
+# githubusercontent
+/[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
+# gist github
+/gist\.github\.com/[^/]+/[0-9a-f]+
+
+# yaml regular expression
+^\s*pattern: \^.*\$$
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
+
+# k8s
+[Kk]8[Ss]
+
+# s3a
+[Ss]3[Aa]
+
+# <word>v#
+[Vv]\d+(?:\b|(?=[a-zA-Z_]))
